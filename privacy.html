@@ -17,11 +17,12 @@
   ul { padding-left: 20px; }
   footer { margin-top: 48px; color: #888; font-style: italic; font-size: .9rem; }
   code { background: rgba(128,128,128,.15); padding: 1px 5px; border-radius: 4px; }
+  .opt { color: #0b7; font-size: .82rem; font-weight: 600; white-space: nowrap; }
 </style>
 </head>
 <body>
 <h1>FLINT 개인정보처리방침</h1>
-<p class="eff">시행일: 2026년 7월 13일</p>
+<p class="eff">시행일: 2026년 8월 19일 &middot; 직전 개정일: 2026년 7월 13일</p>
 <p>FLINT(이하 "앱")는 수험생의 공부 기록·통계·AI 코칭 서비스를 제공합니다. 서비스 제공을 위해 이용자의 개인정보를 아래와 같이 수집·이용하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.</p>
 
 <h2>1. 수집하는 개인정보 항목</h2>
@@ -34,10 +35,14 @@
   <tr><td>공부 기록</td><td>과목별 공부 시간·블록, 플랜/투두, 자체평가 점수</td><td>서비스 이용 중</td></tr>
   <tr><td>시험 정보</td><td>목표 시험일(D-day)</td><td>온보딩</td></tr>
   <tr><td>동의 이력</td><td>동의 항목·버전·일시</td><td>동의 시</td></tr>
+  <tr><td>자각 기록</td><td>AI 코칭 대화에서 이용자가 직접 입력한 답변(자유 텍스트)</td><td>코칭 이용 중</td></tr>
+  <tr><td>앱 이용 기록<br><span class="opt">[선택 동의 시]</span></td><td>화면 이동 경로, 터치·스크롤 등 조작 기록, 세션 길이, 기기 종류·OS 버전<br>(화면에 표시된 텍스트는 <strong>가려진 상태</strong>로 기록)</td><td>서비스 이용 중</td></tr>
 </table>
 <ul>
   <li>이름·전화번호·주소·결제정보·위치는 <strong>수집하지 않습니다.</strong></li>
-  <li>광고 식별자, 행태정보 추적 SDK, 애널리틱스·크래시 수집 SDK는 <strong>사용하지 않습니다.</strong></li>
+  <li><strong>광고 식별자(IDFA)는 수집하지 않으며</strong>, 광고 목적의 추적을 하지 않습니다.</li>
+  <li>이용 분석 도구(Google Analytics, Microsoft Clarity)는 <strong>[선택] 동의한 이용자에게만</strong> 동작합니다. 동의하지 않으면 해당 도구가 <strong>앱에서 실행되지 않으며</strong>, 앱의 모든 기능은 동일하게 이용할 수 있습니다.</li>
+  <li>이용자가 자유 입력란에 스스로 기재한 내용은 그 범위에서 수집될 수 있습니다.</li>
 </ul>
 
 <h2>2. 개인정보의 수집·이용 목적</h2>
@@ -46,6 +51,7 @@
   <li><strong>AI 코칭</strong>: 학습 요약을 바탕으로 코칭 문구 생성(제5항 참조).</li>
   <li><strong>회원 관리</strong>: 본인 확인, 부정 이용 방지, 문의 응대, 공지 전달.</li>
   <li><strong>연령 확인</strong>: 만 14세 미만 아동의 법정대리인 동의 절차 이행.</li>
+  <li><strong>(선택 동의 시) 이용 분석</strong>: 이용 흐름 파악을 통한 화면·기능 개선.</li>
   <li><strong>(선택 동의 시) 마케팅</strong>: 이벤트·업데이트 알림 발송.</li>
 </ul>
 
@@ -53,6 +59,8 @@
 <ul>
   <li>이용자의 개인정보는 <strong>회원 탈퇴 시 지체 없이 파기</strong>합니다.</li>
   <li>앱 내 <strong>[프로필 &gt; 회원탈퇴·데이터 삭제]</strong>를 실행하면 서버에 저장된 공부 기록·계정 정보가 즉시 삭제되고, 인증 계정도 함께 삭제됩니다.</li>
+  <li><strong>자각 기록</strong>(AI 코칭 답변): 회원 탈퇴 시 지체 없이 파기합니다.</li>
+  <li><strong>앱 이용 기록</strong>(선택 동의 시): 수집일로부터 <strong>14개월</strong> 보관 후 자동 파기합니다.</li>
   <li>법령에 따라 보존이 필요한 경우 해당 기간 동안 분리 보관 후 파기합니다.</li>
 </ul>
 
@@ -63,8 +71,23 @@
   <tr><td>Supabase Inc.</td><td>인증·데이터베이스 클라우드 호스팅</td><td>계정·공부 기록</td></tr>
   <tr><td>Vercel Inc.</td><td>API 서버 호스팅</td><td>요청 처리 데이터</td></tr>
   <tr><td>OpenAI</td><td>AI 코칭 문구 생성</td><td><strong>익명 학습 요약</strong>(과목별 시간·목표 등 통계 수치, 개인 식별정보 제외)</td></tr>
+  <tr><td>Google LLC<br><span class="opt">[선택 동의 시]</span></td><td>앱 이용 통계 분석<br>(Google Analytics for Firebase)</td><td>앱 이용 기록(화면 이동·조작 기록)</td></tr>
+  <tr><td>Microsoft Corporation<br><span class="opt">[선택 동의 시]</span></td><td>앱 이용 흐름 분석·세션 기록<br>(Microsoft Clarity)</td><td>앱 이용 기록<br>(<strong>화면 내 텍스트는 전부 가려진 상태</strong>)</td></tr>
 </table>
 <p>위탁 데이터는 위탁 목적 범위 내에서만 처리되며, 전 구간 암호화(TLS)로 전송됩니다.</p>
+<p>Google·Microsoft에 대한 위탁은 <strong>[선택] 동의 항목</strong>입니다. 동의하지 않아도 앱의 모든 기능을 동일하게 이용할 수 있습니다. 세션 기록 시 화면에 표시된 텍스트는 <strong>가려진 상태로 전송</strong>되며, 이용자가 입력한 내용과 <strong>AI 코칭 대화 내용은 기록되지 않습니다.</strong></p>
+
+<h2>4-1. 개인정보의 국외 이전</h2>
+<p>FLINT의 수탁자는 모두 국외 사업자이며, 서비스 이용 시 아래와 같이 개인정보가 국외로 이전됩니다. 이전은 서비스 이용 시점에 네트워크(TLS 암호화)를 통해 이루어집니다.</p>
+<table>
+  <tr><th>이전받는 자</th><th>이전 국가</th><th>이전 항목</th><th>이용 목적 / 보유 기간</th></tr>
+  <tr><td>Supabase Inc.</td><td>미국</td><td>계정·공부 기록</td><td>인증·저장 / 회원 탈퇴 시 파기</td></tr>
+  <tr><td>Vercel Inc.</td><td>미국</td><td>요청 처리 데이터</td><td>API 호스팅 / 처리 후 미보관</td></tr>
+  <tr><td>OpenAI</td><td>미국</td><td>익명 학습 요약</td><td>코칭 문구 생성 / 미보관</td></tr>
+  <tr><td>Google LLC</td><td>미국</td><td>앱 이용 기록</td><td>이용 통계 / 14개월</td></tr>
+  <tr><td>Microsoft Corporation</td><td>미국</td><td>앱 이용 기록(텍스트 마스킹)</td><td>이용 흐름 분석 / 위탁 계약 종료 시</td></tr>
+</table>
+<p>이용자는 국외 이전을 거부할 수 있습니다. 다만 Supabase·Vercel·OpenAI로의 이전은 서비스 제공에 필수적이므로, 거부 시 회원 탈퇴를 통해 이용을 중단할 수 있습니다. Google·Microsoft로의 이전은 <strong>[선택] 항목이므로 동의하지 않아도 서비스 이용에 제한이 없습니다.</strong></p>
 
 <h2>5. AI 코칭과 정보 전송</h2>
 <p>이용자가 <strong>주간·월간 코칭을 요청할 때</strong>, 해당 기간의 <strong>익명 학습 요약</strong>(과목명, 과목별 공부 시간·목표, 시험까지 남은 일수 등 통계 수치)이 코칭 문구 생성을 위해 서버를 거쳐 AI 처리업체(OpenAI)에 전달됩니다.</p>
@@ -79,6 +102,7 @@
   <li><strong>열람·정정</strong>: 앱 내 기록·설정에서 직접 확인·수정.</li>
   <li><strong>삭제·처리정지·탈퇴</strong>: 앱 내 회원탈퇴로 전체 삭제, 또는 아래 문의처로 요청.</li>
   <li><strong>데이터 이동</strong>: 본인 기록 사본 요청 가능.</li>
+  <li><strong>선택 동의 철회</strong>: 이용 분석·마케팅 등 [선택] 동의는 아래 문의처로 요청하시면 지체 없이 처리합니다.</li>
 </ul>
 
 <h2>7. 만 14세 미만 아동</h2>
@@ -99,6 +123,7 @@
 
 <h2>10. 고지의 의무</h2>
 <p>본 방침이 변경될 경우 앱 또는 본 페이지를 통해 변경 사항을 공지합니다.</p>
+<p>2026년 8월 19일 개정에서는 <strong>(1) 자각 기록(AI 코칭 답변)의 서버 저장</strong>, <strong>(2) 이용 분석 도구(Google, Microsoft) 위탁 추가 — [선택] 동의</strong>, <strong>(3) 국외 이전 조항 신설</strong>이 반영되었습니다. 앱 최초 실행 시 변경된 동의를 다시 받습니다.</p>
 
 <footer>FLINT — 하려던 공부와 실제 한 공부를, 매일 마주보게 하는 앱.</footer>
 </body>
